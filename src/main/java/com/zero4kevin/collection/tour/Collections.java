@@ -1,5 +1,6 @@
 package com.zero4kevin.collection.tour;
 
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.LinkedList;
 
@@ -19,6 +20,9 @@ public class Collections {
             System.out.print(i.next()+", ");
         }
         System.out.println();
+
+        Arrays.asList();
+
 
     }
 }
