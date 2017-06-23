@@ -31,7 +31,7 @@ public abstract class Pizza {
     }
 
     public String getName(){
-        return name;
+        return name + " with "+ dough.getClass().toString();
     }
 
     public void setName(String name){this.name=name;}
