@@ -2,8 +2,6 @@ package com.zero4kevin.desginPatterns.FactoryMethod;
 
 import com.zero4kevin.desginPatterns.FactoryMethod.Ingredients.*;
 
-import java.util.ArrayList;
-
 /**
  * Created by xi1zhang on 2017/6/22.
  */
@@ -14,7 +12,7 @@ public abstract class Pizza {
     Veggies[] veggiesArray;
     Cheese cheese;
     Clams clam;
-    ArrayList toppings = new ArrayList();
+
 
     abstract void prepare();
 

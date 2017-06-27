@@ -7,18 +7,22 @@ import com.zero4kevin.desginPatterns.FactoryMethod.Ingredients.*;
  */
 public class NYPizzaIngredientFactory implements PizzaIngredientFactory {
     public Dough createDough(){
+        System.out.print("adding ");
         return new ThinCrustDough();
     }
 
     public Sauce createSauce(){
+        System.out.print("adding ");
         return new MarinaraSauce();
     }
 
     public Cheese createCheese(){
+        System.out.println("Adding Reggiano Cheese");
         return new ReggianoCheese();
     }
 
     public Veggies[] createVeggies(){
+        System.out.println("add vegetables ");
         Veggies[] veggies= {new Garlic(), new Mushroom(), new RedPepper()};
         return veggies;
     }
