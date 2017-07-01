@@ -1,14 +1,22 @@
 package com.zero4kevin.desginPatterns.FactoryMethod;
 
+import com.zero4kevin.desginPatterns.FactoryMethod.Ingredients.*;
+
 /**
  * Created by xi1zhang on 2017/6/22.
  */
 public class NYStyleCheesePizza extends Pizza {
-    public NYStyleCheesePizza() {
-        name = "NY Style Sauce and Cheese Pizza";
-        dough = "Thin Crust Dough";
-        sauce = "Marinara Sauce";
-
-        toppings.add("Grated Reggiano Cheese");
+    PizzaIngredientFactory ingredientFactory;
+    public NYStyleCheesePizza(PizzaIngredientFactory pizzaIngredientFactory) {
+        ingredientFactory=pizzaIngredientFactory;
     }
+
+    public void prepare(){
+        System.out.println("preparing "+ name + ".......");
+        ingredientFactory.createDough();
+        ingredientFactory.createSauce();
+        ingredientFactory.createCheese();
+        ingredientFactory.createVeggies();
+    }
+
 }
