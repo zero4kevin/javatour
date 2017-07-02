@@ -3,7 +3,7 @@ package com.zero4kevin.desginPatterns.CommandPattern;
 /**
  * Created by kevin on 7/1/17.
  */
-public class Door {
+public class GarageDoor {
     private boolean doorOpen=false;
 
     public void up(){

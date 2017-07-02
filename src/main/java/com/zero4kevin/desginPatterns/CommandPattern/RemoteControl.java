@@ -29,7 +29,7 @@ public class RemoteControl {
         offCommands[slot].execute();
     }
 
-    @Override
+
     public String toString() {
         StringBuffer buffer=new StringBuffer();
         buffer.append("\n------ Remote Control ------\n");

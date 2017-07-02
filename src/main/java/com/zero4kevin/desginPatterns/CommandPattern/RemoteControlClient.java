@@ -9,7 +9,7 @@ public class RemoteControlClient {
         Light light=new Light();
         LightCommand lightCommand=new LightCommand(light);
 
-        Door garageDoor=new Door();
+        GarageDoor garageDoor=new GarageDoor();
         GarageDoorCommand garageDoorCommand=new GarageDoorCommand(garageDoor);
 
         remoteControl.setCommand(garageDoorCommand);
@@ -20,6 +20,39 @@ public class RemoteControlClient {
         remoteControl.setCommand(garageDoorCommand);
         remoteControl.buttonWasPressed();
 
+//        a new example starts from here.
+        RemoteControl remoteController= new RemoteControl();
+        Light livingRoomLight=new Light("Living room ");
+        Light kitchenRoomLight=new Light("Kitchen");
+        CeilingFan ceilingFan= new CeilingFan("Living room");
+        garageDoor=new GarageDoor();
+        Stereo stereo=new Stereo("Living room");
+
+        LightOnCommand livingRoomLightOn= new LightOnCommand(livingRoomLight);
+        LightOffCommand livingRoomLightOff= new LightOffCommand(livingRoomLight);
+        LightOnCommand kitchenRoomLightOn= new LightOnCommand(kitchenRoomLight);
+        LightOffCommand kitchenRoomLightOff= new LightOffCommand(kitchenRoomLight);
+
+        CeilingFanOnCommand ceilingFanOn= new CeilingFanOnCommand(ceilingFan);
+        CeilingFanOffCommand ceilingFanOff= new CeilingFanOffCommand(ceilingFan);
+
+        GarageDoorUpCommand garageDoorUp= new GarageDoorUpCommand(garageDoor);
+        GarageDoorDownCommand garageDoorDown= new GarageDoorDownCommand(garageDoor);
+
+        StereoOnWithCDCommand stereoOnWithCD= new StereoOnWithCDCommand(stereo);
+        StereoOffCommand stereoOff= new StereoOffCommand(stereo);
+
+        remoteController.setCommand(0, livingRoomLightOn, livingRoomLightOff);
+        remoteController.setCommand(1, kitchenRoomLightOn, kitchenRoomLightOff);
+        remoteController.setCommand(2,ceilingFanOn, ceilingFanOff);
+        remoteController.setCommand(3,stereoOnWithCD,stereoOff);
+
+        System.out.println(remoteController);
+
+        remoteController.onButtonWasPressed(0);
+        remoteController.onButtonWasPressed(1);
+        remoteController.offButtonWasPressed(1);
+        remoteController.offButtonWasPressed(0);
 
     }
 }

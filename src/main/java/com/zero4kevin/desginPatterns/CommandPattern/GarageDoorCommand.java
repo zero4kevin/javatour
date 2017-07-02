@@ -4,9 +4,9 @@ package com.zero4kevin.desginPatterns.CommandPattern;
  * Created by kevin on 7/1/17.
  */
 public class GarageDoorCommand implements Command {
-    private Door door;
+    private GarageDoor door;
 
-    public GarageDoorCommand(Door door) {
+    public GarageDoorCommand(GarageDoor door) {
         this.door = door;
     }
 
