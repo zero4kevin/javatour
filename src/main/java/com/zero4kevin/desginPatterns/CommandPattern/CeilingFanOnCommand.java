@@ -13,4 +13,8 @@ public class CeilingFanOnCommand implements Command {
     public void execute() {
         fan.on();
     }
+
+    public void undo() {
+        fan.off();
+    }
 }

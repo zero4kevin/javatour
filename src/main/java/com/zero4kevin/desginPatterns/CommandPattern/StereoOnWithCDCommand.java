@@ -17,4 +17,8 @@ public class StereoOnWithCDCommand implements Command{
         stereo.setCd();
         stereo.setVolume(new Random().nextInt(13));
     }
+
+    public void undo() {
+        stereo.off();
+    }
 }

@@ -35,6 +35,8 @@ public class RemoteControlClient {
 
         CeilingFanOnCommand ceilingFanOn= new CeilingFanOnCommand(ceilingFan);
         CeilingFanOffCommand ceilingFanOff= new CeilingFanOffCommand(ceilingFan);
+        CeilingFanHighCommand ceilingFanHigh= new CeilingFanHighCommand(ceilingFan);
+        CeilingFanMediumCommand ceilingFanMedium=new CeilingFanMediumCommand(ceilingFan);
 
         GarageDoorUpCommand garageDoorUp= new GarageDoorUpCommand(garageDoor);
         GarageDoorDownCommand garageDoorDown= new GarageDoorDownCommand(garageDoor);
@@ -44,8 +46,9 @@ public class RemoteControlClient {
 
         remoteController.setCommand(0, livingRoomLightOn, livingRoomLightOff);
         remoteController.setCommand(1, kitchenRoomLightOn, kitchenRoomLightOff);
-        remoteController.setCommand(2,ceilingFanOn, ceilingFanOff);
-        remoteController.setCommand(3,stereoOnWithCD,stereoOff);
+        remoteController.setCommand(2,ceilingFanHigh, ceilingFanOff);
+        remoteController.setCommand(3,ceilingFanMedium,ceilingFanOff);
+        remoteController.setCommand(4,stereoOnWithCD,stereoOff);
 
         System.out.println(remoteController);
 
@@ -53,6 +56,7 @@ public class RemoteControlClient {
         remoteController.onButtonWasPressed(1);
         remoteController.offButtonWasPressed(1);
         remoteController.offButtonWasPressed(0);
+        remoteController.undoButtonWasPushed();
 
     }
 }

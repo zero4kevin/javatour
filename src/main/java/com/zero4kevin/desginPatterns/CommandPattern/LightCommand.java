@@ -17,4 +17,8 @@ public class LightCommand implements Command {
             light.lightOn();
         }
     }
+
+    public void undo() {
+        this.execute();
+    }
 }
