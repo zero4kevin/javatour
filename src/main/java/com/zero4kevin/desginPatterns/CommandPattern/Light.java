@@ -1,6 +1,6 @@
 package com.zero4kevin.desginPatterns.CommandPattern;
 
-import org.apache.commons.lang3.StringUtils;
+//import org.apache.commons.lang3.StringUtils;
 
 import com.zero4kevin.Utils.Strings;
 
@@ -22,16 +22,17 @@ public class Light {
     }
 
     public void lightOn(){
-        if(StringUtils.isEmpty(string)) {
-            System.out.println(Strings.captilizeFirstLetter(lightIsOn));
-        }else {
-            System.out.println(string + " " +lightIsOn);
-        }
-        lightOn = true;
+//        if(StringUtils.isEmpty(string)) {
+//            System.out.println(Strings.captilizeFirstLetter(lightIsOn));
+//        }else {
+//            System.out.println(string + " " +lightIsOn);
+//        }
+//        lightOn = true;
     }
 
     public void lightOff(){
-        if(StringUtils.isEmpty(string)){
+//        if(StringUtils.isEmpty(string)){
+        if(true){
             System.out.println(Strings.captilizeFirstLetter(lightIsOff));
         }else{
             System.out.println(string + " " + lightIsOff);

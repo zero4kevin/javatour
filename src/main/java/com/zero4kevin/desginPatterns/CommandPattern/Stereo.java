@@ -1,6 +1,6 @@
 package com.zero4kevin.desginPatterns.CommandPattern;
 
-import org.apache.commons.lang3.StringUtils;
+//import org.apache.commons.lang3.StringUtils;
 
 /**
  * Created by kevin on 7/2/17.
@@ -17,19 +17,19 @@ public class Stereo {
     }
 
     public void on(){
-        if(StringUtils.isEmpty(room)){
-            System.out.println("The stereo is playing");
-        }else{
+//        if(StringUtils.isEmpty(room)){
+//            System.out.println("The stereo is playing");
+//        }else{
             System.out.println("The "+ room +" stereo is playing");
-        }
+//        }
     }
 
     public void off(){
-        if(StringUtils.isEmpty(room)){
-            System.out.println("The stereo is stop");
-        }else{
+//        if(StringUtils.isEmpty(room)){
+//            System.out.println("The stereo is stop");
+//        }else{
             System.out.println("The "+ room +" stereo is stop");
-        }
+//        }
     }
 
     public void setCd() {System.out.println("The play mode is CD");}
