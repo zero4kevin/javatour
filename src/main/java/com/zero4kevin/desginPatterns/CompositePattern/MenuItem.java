@@ -3,7 +3,7 @@ package com.zero4kevin.desginPatterns.CompositePattern;
 /**
  * Created by xi1zhang on 2017/7/10.
  */
-public class MenuItem {
+public class MenuItem extends MenuComponent {
     String name;
     String description;
     boolean vegetarian;
@@ -34,4 +34,14 @@ public class MenuItem {
         return price;
     }
 
+    @Override
+    public void print() {
+        System.out.print("  " + getName());
+        if(isVegetarian()){
+            System.out.print("v");
+        }else{
+            System.out.println(", " + getPrice());
+            System.out.println("    ==  "+getDescription());
+        }
+    }
 }
