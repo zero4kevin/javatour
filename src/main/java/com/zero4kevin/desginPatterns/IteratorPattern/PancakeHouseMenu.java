@@ -5,7 +5,7 @@ import java.util.*;
 /**
  * Created by xi1zhang on 2017/7/10.
  */
-public class PancakeHouseMenu {
+public class PancakeHouseMenu implements Menu{
     ArrayList menuItems;
 
     public PancakeHouseMenu() {
@@ -26,6 +26,6 @@ public class PancakeHouseMenu {
     }
 
     public Iterator createIterator(){
-        return new PancakeHouseMenuIterator(menuItems);
+        return menuItems.iterator();
     }
 }

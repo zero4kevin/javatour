@@ -1,9 +1,10 @@
 package com.zero4kevin.desginPatterns.IteratorPattern;
 
+import java.util.*;
 /**
  * Created by xi1zhang on 2017/7/10.
  */
-public class DinerMenu {
+public class DinerMenu implements Menu{
     static final int MAX_ITEMS= 6;
     int numberOfItems=0;
     MenuItem[] menuItems;
