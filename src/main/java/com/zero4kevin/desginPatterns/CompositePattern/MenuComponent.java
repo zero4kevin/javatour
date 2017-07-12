@@ -1,5 +1,7 @@
 package com.zero4kevin.desginPatterns.CompositePattern;
 
+import java.util.Iterator;
+
 /**
  * Created by kevin on 7/11/17.
  */
@@ -23,11 +25,14 @@ public abstract class MenuComponent {
     public double getPrice(){
         throw new UnsupportedOperationException();
     }
-    public boolean isVegeterian(){
+    public boolean isVegetarian(){
         throw new UnsupportedOperationException();
     }
+//    public abstract boolean isVegetarian();
 
     public void print(){
         throw new UnsupportedOperationException();
     }
+
+    public abstract Iterator createIterator();
 }
